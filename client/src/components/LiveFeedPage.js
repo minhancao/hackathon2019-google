@@ -7,21 +7,15 @@ import {
 } from "stream-chat-react";
 import { MessageInputSmall, Thread } from "stream-chat-react";
 import { StreamChat } from "stream-chat";
+import axios from "axios";
 
 import "stream-chat-react/dist/css/index.css";
 
 const chatClient = new StreamChat("qk4nn7rpcn75");
 const userToken =
-  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZmFuY3ktbWF0aC03In0.h77C0vYnaWNYVG_1BhYN71UPZxm_O7SGKWU1Pi5ci8Q";
+  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoicGxhaW4tYnVzaC00In0.MAK11lFbw7tXWRaQSLWb2_WCmSgy3_Px2Sm047qE5Cc";
 
-chatClient.setUser(
-  {
-    id: "fancy-math-7",
-    name: "Fancy math",
-    image: "https://getstream.io/random_svg/?id=fancy-math-7&name=Fancy+math"
-  },
-  userToken
-);
+chatClient.setAnonymousUser();
 
 const channel = chatClient.channel("livestream", "spacex", {
   image: "https://goo.gl/Zefkbx",
@@ -40,4 +34,5 @@ const LiveFeedPage = () => (
     </Channel>
   </Chat>
 );
+
 export default LiveFeedPage;
