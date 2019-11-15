@@ -12,7 +12,7 @@ class CustomNavbar extends Component {
   render() {
     return (
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar color="secondary">
           <IconButton
             edge="start"
             className=""
@@ -21,14 +21,11 @@ class CustomNavbar extends Component {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className="">
-            News
-          </Typography>
           <Link to="/" className="">
-            <Button color="inherit">Home</Button>
+            <Button color="secondary">Home</Button>
           </Link>
           <Link to="/teacher" className="">
-            <Button color="inherit">Teacher</Button>
+            <Button color="secondary">Teacher</Button>
           </Link>
           <Link to="/student" className="">
             <Button color="inherit">Student</Button>

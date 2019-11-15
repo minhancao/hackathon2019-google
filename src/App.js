@@ -7,7 +7,6 @@ import LoginPage from "./components/LoginPage";
 import StudentPage from "./components/StudentPage";
 import TeacherPage from "./components/TeacherPage";
 import CustomLayout from "./components/CustomLayout";
-
 const DefaultContainer = () => (
   <CustomLayout>
     <div>
