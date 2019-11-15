@@ -20,8 +20,7 @@ class CustomNavbar extends Component {
             color="inherit"
             aria-label="menu"
           >
-            {/* <MenuIcon /> */}
-            <SideBar/>
+            <SideBar />
           </IconButton>
           <Typography variant="h6" className="">
             News
