@@ -5,14 +5,16 @@ import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import { green, purple } from '@material-ui/core/colors';
-import { Link } from "react-router-dom";
-import { MemoryRouter as Router } from 'react-router';
+import Background from "./interactive.jpg";
+import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
 
 
 const useStyles = makeStyles({
   root: {
     width: '100%',
     maxWidth: 500,
+
   },
   
 });
@@ -61,10 +63,13 @@ const BootstrapButton = withStyles({
     },
   },
 })(Button);
+
+
+
 export default function Types() {
   const classes = useStyles();
   const classes2 = useStyles2();
-
+ 
   return (
     <React.Fragment>
     <CssBaseline />
@@ -77,19 +82,22 @@ export default function Types() {
       <Typography variant="h5" gutterBottom>
         A live class feed for students and professors.
       </Typography>
-      <Container maxWidth="sm">
-      <Typography component="div" style={{ backgroundColor: '#FFFDFD', height: '5vh' }} />
-      </Container>
+      
+      <Typography component="div" style={{ backgroundColor: '#FFFDFD', height: '3vh' }} />
+      
       <div>
-      <Link to="/student" className=""> {/*fix link later to pop up login*/}
+      <Link href="/student" className={classes.link}>
       <BootstrapButton variant="contained" color="primary" disableRipple className={classes.margin}>
         Login to get started
-      </BootstrapButton>
+      </BootstrapButton>    
       </Link>
-     
       </div>
-    </div>
+      <Typography component="div" style={{ backgroundColor: '#FFFDFD', height: '5vh' }}></Typography>
+      </div>
+   
+    <img src={Background} margin ="0vh"width="600" height = "300"/>
     </Container>
     </React.Fragment>
+    
   );
 }

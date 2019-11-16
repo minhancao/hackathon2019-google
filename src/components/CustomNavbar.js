@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 class CustomNavbar extends Component {
   render() {
     return (
-      <AppBar position="static">
+      <AppBar position="static" color ="primary" >
         <Toolbar color="secondary">
           <IconButton
             edge="start"
@@ -22,14 +22,9 @@ class CustomNavbar extends Component {
             <MenuIcon />
           </IconButton>
           <Link to="/" className="">
-            <Button color="secondary">Home</Button>
+            <Button color="default" size = "large">HOME</Button>
           </Link>
-          <Link to="/teacher" className="">
-            <Button color="secondary">Teacher</Button>
-          </Link>
-          <Link to="/student" className="">
-            <Button color="inherit">Student</Button>
-          </Link>
+          
         </Toolbar>
       </AppBar>
     );
