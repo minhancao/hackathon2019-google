@@ -7,6 +7,7 @@ import LoginPage from "./components/LoginPage";
 import StudentPage from "./components/StudentPage";
 import TeacherPage from "./components/TeacherPage";
 import CustomLayout from "./components/CustomLayout";
+import LoginFormPage from "./components/LoginFormPage";
 
 const DefaultContainer = () => (
   <CustomLayout>
@@ -14,6 +15,7 @@ const DefaultContainer = () => (
       <Route exact path="/" component={LoginPage} />
       <Route exact path="/student" component={StudentPage} />
       <Route exact path="/teacher" component={TeacherPage} />
+      <Route exact path="/loginform" component={LoginFormPage} />
     </div>
   </CustomLayout>
 );

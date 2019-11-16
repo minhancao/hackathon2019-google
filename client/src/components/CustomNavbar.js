@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
+import SideBar from "./SideBar";
 
 class CustomNavbar extends Component {
   render() {
@@ -19,19 +20,10 @@ class CustomNavbar extends Component {
             color="inherit"
             aria-label="menu"
           >
-            <MenuIcon />
+            <SideBar />
           </IconButton>
-          <Typography variant="h6" className="">
-            News
-          </Typography>
           <Link to="/" className="">
             <Button color="inherit">Home</Button>
-          </Link>
-          <Link to="/teacher" className="">
-            <Button color="inherit">Teacher</Button>
-          </Link>
-          <Link to="/student" className="">
-            <Button color="inherit">Student</Button>
           </Link>
         </Toolbar>
       </AppBar>
